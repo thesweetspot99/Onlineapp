@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sweet Spot Platforms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #444;
+    }
+    nav button {
+      flex: 1;
+      padding: 1rem;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    nav button:hover {
+      background-color: #666;
+    }
+    section {
+      display: none;
+      padding: 2rem;
+    }
+    section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Sweet Spot: Unified Platform</h1>
+  </header>
+  <nav>
+    <button onclick="showSection('kidpreneur')">Kidpreneur Academy</button>
+    <button onclick="showSection('contentpulse')">ContentPulse</button>
+    <button onclick="showSection('neighborgig')">NeighborGig</button>
+  </nav>
+
+  <section id="kidpreneur" class="active">
+    <h2>Kidpreneur Academy</h2>
+    <p>Welcome to Kidpreneur Academy — empowering youth with financial literacy and entrepreneurship skills.</p>
+  </section>
+
+  <section id="contentpulse">
+    <h2>ContentPulse</h2>
+    <p>Automate your social media game with ContentPulse: smart monitoring, AI captions, and scheduled posts.</p>
+  </section>
+
+  <section id="neighborgig">
+    <h2>NeighborGig</h2>
+    <p>Find gigs, hire locals, and empower communities. NeighborGig connects neighborhoods with opportunities.</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
