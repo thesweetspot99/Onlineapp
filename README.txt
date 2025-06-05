@@ -1,0 +1,1 @@
+Instructions to deploy on GoDaddy or Vercel
